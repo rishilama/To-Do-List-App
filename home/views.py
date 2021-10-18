@@ -1,3 +1,4 @@
+from django.http.response import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from . models import Tasks
 
@@ -19,3 +20,9 @@ def details(request):
     context = {'tasks': allTasks}
     return render(request, 'tasks.html', context)
 
+
+
+def deleteTask(request, task_id):
+    taskToDelete = Tasks.objects.get(id=task_id)
+    taskToDelete.delete()
+    return HttpResponseRedirect('/tasks/')

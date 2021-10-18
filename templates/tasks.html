@@ -9,6 +9,8 @@
             <th scope="col">Index</th>
             <th scope="col">Task Title</th>
             <th scope="col">Task Description</th>
+            <th scope="col"></th>
+
             </tr>
         </thead>
         <tbody>
@@ -17,9 +19,17 @@
             <th scope="row">{{forloop.counter}}</th>
             <td>{{task.title}}</td>
             <td>{{task.description}}</td>
+            <td>
+                <form action="/deletetodo/{{task.id}}" method="post">
+                {% csrf_token %}
+                    <input class="btn-outline-danger" type="submit" value="Delete">
+                </form>
+            </td>
             </tr>
         {% endfor %}
         </tbody>
         </table>
     </div>
+
+    <p class="text-center container mt-5">If you want to add some item then go to <br><a href="{% url 'homePage' %}">TODOLIST  |  Add Task </a>page</p>
 {% endblock content %}

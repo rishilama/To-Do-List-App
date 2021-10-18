@@ -1,0 +1,8 @@
+to delete the task
+    the id id recorded of task_id in which the 
+    button is clicked and then it is stored in
+    the taskToDelete variable.
+
+    then the .delete() deletes it 
+    
+    then we are redirected back to the tasks page.

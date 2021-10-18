@@ -1,9 +1,8 @@
 Models
 1.Task
-    1.title
-    2.description
-    3.status
-    4.added_date
+    1.title - add,delete
+    2.description - add, delete
+    3.added_date - auto update
 
 
 Templates

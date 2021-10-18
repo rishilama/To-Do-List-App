@@ -1,0 +1,11 @@
+Models
+1.Task
+    1.title
+    2.description
+    3.status
+    4.added_date
+
+
+Templates
+1. Home
+2. Task Page

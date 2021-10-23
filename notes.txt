@@ -1,5 +1,5 @@
 to delete the task
-    the id id recorded of task_id in which the 
+    the id is recorded of task_id in which the 
     button is clicked and then it is stored in
     the taskToDelete variable.
 

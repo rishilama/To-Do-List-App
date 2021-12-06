@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="padding-top:100px;
+			padding-bottom:100px">
+			<form class="container" method="post" action="{% url 'register' %}">
+				<p class="my-5"></p>
+				<h1>Registration Form</h2>
+				  <p class="danger">{{message}}</p>
+				  {% csrf_token %}
+				  <div class="form-group">
+					  <label for="exampleInputEmail1">Username</label>
+					  <input name="username" type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+				  </div>
+			  <div class="form-group">
+				  <label for="exampleInputEmail1">Email</label>
+				  <input name="email" type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email">
+			  </div>
+			  <div class="form-group">
+				  <label for="exampleInputPassword1">Password</label>
+				<input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </div>
+			  <p>Already a User? <a href="{% url 'login_user' %}">Log In</a></p>
+			  <button type="submit" class="btn btn-primary">Register</button>
+			  <p class="my-5"></p>
+		  </form>
+</div>
+{% endblock content %}

@@ -33,6 +33,13 @@
                         <a class="nav-link" href="{% url 'taskPage' %}">Tasks</a>
                     </li>
                 </ul>
+                {% if user.is_authenticated %}
+                    <button class="btn btn-danger" type="button"><a style="text-decoration:none; color:white" href="{% url 'logout_user' %}">Logout</a></button>
+                {% else %}
+                    <button class="btn btn-success" type="button"><a style="text-decoration:none; color:white" href="{% url 'login_user' %}">Login</a></button>
+                    <span style="margin-right:8px"></span>
+                    <button class="btn btn-success" type="button"><a style="text-decoration:none; color:white" href="{% url 'register' %}">Sign Up</a></button>
+                {% endif %}
             </div>
         </div>
     </nav>

@@ -24,26 +24,30 @@
             })
         </script>
     {% endif %}
-    <div class="container mt-3 my-10 mb-3 mr-10">
+    
+    <div style="padding-top:100px;
+    padding-bottom:150px">
+        <div class="container mt-3 my-10 mb-3 mr-10">
         
-        <h2 class="text-center">TODOLIST  |  ADD A TASK</h2>
-        <form action="/" method="post">
-        {% csrf_token %}
-
-            <div class="form-group">
-                <label for="title">Task</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="Please add a task">
-            </div>
-            <div class="form-group">
-                <label for="description">Details of the Task</label>
-                <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Please enter the details of the task"></textarea>
-            </div>
-            <div class="col-md-12 mt-3 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button> 
-            </div>
-        </form>
+            <h2 class="text-center">TODOLIST  |  ADD A TASK</h2>
+            <form action="/" method="post">
+            {% csrf_token %}
+    
+                <div class="form-group">
+                    <label for="title">Task</label>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Please add a task">
+                </div>
+                <div class="form-group">
+                    <label for="description">Details of the Task</label>
+                    <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Please enter the details of the task"></textarea>
+                </div>
+                <div class="col-md-12 mt-3 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button> 
+                </div>
+            </form>
+        </div>
+    
     </div>
-
 
     <script>
         $('.alert').alert()
